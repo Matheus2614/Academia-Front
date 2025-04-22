@@ -1,4 +1,4 @@
-const baseURL = 'http://10.142.227.101:8000/clientes/'
+const baseURL = 'https://academia-api-xi.vercel.app/clientes/'
 const resposta = document.getElementById('resposta')
 
 let clienteJson
