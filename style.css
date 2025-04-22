@@ -68,7 +68,6 @@ main {
   gap: 10px;
   width: 60%;
   height: 70%;
-  border: 1px solid red;
 }
 
 .numpad button {
