@@ -39,6 +39,7 @@ async function getCliente() {
     }
     catch (error) {
         console.log("Erro ao chamar a API:" + error)
+        resposta.innerHTML = `Erro no sistema!`
 
         setTimeout(() => {
             document.getElementById('cpf').value = '';
