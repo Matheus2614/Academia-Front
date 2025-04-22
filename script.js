@@ -7,6 +7,9 @@ async function getCliente() {
     const cpf = document.getElementById('cpf').value
     console.log(cpf)
 
+    resposta.classList.add('d-block')
+    resposta.classList.remove('d-none')
+
     try {
         const cliente = await fetch(baseURL + cpf, {
             method: "GET",
@@ -34,6 +37,8 @@ async function getCliente() {
         setTimeout(() => {
             document.getElementById('cpf').value = '';
             document.getElementById('cpf').classList.remove('sucesso', 'erro');
+            resposta.classList.add('d-none');
+            resposta.classList.remove('d-block');
         }, 2000);
 
     }
@@ -44,6 +49,8 @@ async function getCliente() {
         setTimeout(() => {
             document.getElementById('cpf').value = '';
             document.getElementById('cpf').classList.remove('sucesso', 'erro');
+            resposta.classList.add('d-none');
+            resposta.classList.remove('d-block');
         }, 2000);
     }
 }
