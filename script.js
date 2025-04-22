@@ -6,6 +6,7 @@ let clienteJson
 async function getCliente() {
     const cpf = document.getElementById('cpf').value
     console.log(cpf)
+
     try {
         const cliente = await fetch(baseURL + cpf, {
             method: "GET",
@@ -18,19 +19,31 @@ async function getCliente() {
         console.log(clienteJson);
         
         if (clienteJson.status === 'ativo') {
-            resposta.innerHTML = `Seja Bem-Vindo ${clienteJson.nome}! Bom treino!`
+            resposta.innerHTML = `<h3><strong>Seja Bem-Vindo ${clienteJson.nome}!</strong></h3><h5>Bom treino!</h5>`
+
         }  
 
         else if (!clienteJson.cpf) {
-            resposta.innerHTML = `CPF inválido!`
+            resposta.innerHTML = `<h2><strong>CPF inválido ou não cadastrado!</strong></h2>`
         }
 
-        else {
-            resposta.innerHTML = `Cliente não ativo, por favor consulte a secretaria da academia!`
+        else if (clienteJson.status === 'inativo') {
+            resposta.innerHTML = `<h3><strong>Cliente não ativo!</h3><h4>Consulte a secretaria.</strong></h3>`
         }
+
+        setTimeout(() => {
+            document.getElementById('cpf').value = '';
+            document.getElementById('cpf').classList.remove('sucesso', 'erro');
+        }, 2000);
+
     }
     catch (error) {
         console.log("Erro ao chamar a API:" + error)
+
+        setTimeout(() => {
+            document.getElementById('cpf').value = '';
+            document.getElementById('cpf').classList.remove('sucesso', 'erro');
+        }, 2000);
     }
 }
 
