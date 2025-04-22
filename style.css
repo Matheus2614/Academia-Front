@@ -67,7 +67,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   width: 60%;
-  height: 40%;
+  height: 70%;
 }
 
 .numpad button {
