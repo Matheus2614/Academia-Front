@@ -1,4 +1,4 @@
-const baseURL = 'http://127.0.0.1:8000/clientes/'
+const baseURL = 'http://10.142.227.101:8000/clientes/'
 const resposta = document.getElementById('resposta')
 
 let clienteJson
