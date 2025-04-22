@@ -24,14 +24,12 @@ main {
   padding: 1rem;
   text-align: center;
   width: 100%;
-  display: flex;
 }
 
 .header img {
   height: 80px;
   width: auto;
   margin-bottom: 0.5rem;
-  margin-right: 500px;
 }
 
 .header-text h1 {
