@@ -39,7 +39,7 @@ async function getCliente() {
             document.getElementById('cpf').classList.remove('sucesso', 'erro');
             resposta.classList.add('d-none');
             resposta.classList.remove('d-block');
-        }, 2000);
+        }, 5000);
 
     }
     catch (error) {
@@ -51,7 +51,7 @@ async function getCliente() {
             document.getElementById('cpf').classList.remove('sucesso', 'erro');
             resposta.classList.add('d-none');
             resposta.classList.remove('d-block');
-        }, 2000);
+        }, 5000);
     }
 }
 
