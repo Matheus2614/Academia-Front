@@ -1,6 +1,6 @@
 # SENAI - Curso Técnico em Desenvolvimento de Sistemas
 
-![Imagem de capa](/gifs/WR%20FIT-ADM.gif)
+![Imagem de capa](/img/WR%20FIT.gif)
 
 **Descrição:**
 
